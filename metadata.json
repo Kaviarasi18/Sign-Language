@@ -1,0 +1,6 @@
+{
+  "name": "SignBridge – Indian Sign Language Translator",
+  "description": "AI-powered Indian Sign Language (ISL) translation workspace converting webcam temporal gesture sequences into English text and spoken audio, with verified ISL vocabulary lookup and emergency communication.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

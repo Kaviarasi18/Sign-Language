@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #1f0a18;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes rose-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glitter-rose-btn {
+  background: linear-gradient(120deg, #1a040e 0%, #580b2a 28%, #881337 52%, #4a044e 78%, #1a040e 100%);
+  background-size: 240% 240%;
+  animation: rose-shimmer 5s ease infinite;
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  box-shadow: 0 8px 22px -4px rgba(31, 10, 24, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.glitter-rose-btn:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 10px 26px -4px rgba(88, 11, 42, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.glitter-violet-btn {
+  background: linear-gradient(120deg, #0f0c29 0%, #2e1065 38%, #4c1d95 68%, #1e1b4b 100%);
+  background-size: 220% 220%;
+  animation: rose-shimmer 6s ease infinite;
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  box-shadow: 0 6px 18px -4px rgba(30, 27, 75, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.glitter-violet-btn:hover {
+  filter: brightness(1.14);
+}
+
+.glitter-teal-btn {
+  background: linear-gradient(120deg, #042f2e 0%, #0f4c45 40%, #0c4a6e 75%, #042f2e 100%);
+  background-size: 220% 220%;
+  animation: rose-shimmer 6s ease infinite;
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  box-shadow: 0 6px 18px -4px rgba(4, 47, 46, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.glitter-teal-btn:hover {
+  filter: brightness(1.14);
+}
+
+.glitter-rose-surface {
+  background: linear-gradient(145deg, #2e0718 0%, #6b0f35 45%, #9d174d 78%, #4c1d95 100%);
+}
+
+.glitter-emergency-surface {
+  background: linear-gradient(135deg, #991b1b 0%, #e11d48 52%, #ea580c 100%);
+}
+
+.prismatic-top-bar {
+  background: linear-gradient(90deg, #e11d48 0%, #ec4899 28%, #8b5cf6 56%, #0ea5e9 80%, #10b981 100%);
+}
+
+.prismatic-hero-wash {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.12), transparent 42%),
+    radial-gradient(circle at 12% 25%, rgba(139, 92, 246, 0.1), transparent 40%),
+    radial-gradient(circle at 55% 85%, rgba(20, 184, 166, 0.08), transparent 45%),
+    #ffffff;
+}
+
+.glitter-rose-tint {
+  background:
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.14), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent 50%),
+    linear-gradient(180deg, #ffffff 0%, #fff7fa 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .glitter-rose-btn,
+  .glitter-violet-btn,
+  .glitter-teal-btn {
+    animation: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
